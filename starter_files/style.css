@@ -22,13 +22,43 @@ h1{
     text-transform: uppercase;
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #bff;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+}
+
+.inner li {
+  background-color: white;
+}
+
 
 
 
 
 /**** Tablet Styles ***********************************/
 
+@media (min-width: 700px) {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  ul li {
+    flex: 1 1 40%;
+    background-color: #fcf;
+  }
+
+  .inner {
+    flex: 1 1 100%;
+  }
+}
 
 
 
@@ -37,11 +67,22 @@ h1{
 
 /**** Desktop Styles ***********************************/
 
+@media (min-width: 1000px) {
 
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+ ul li {
+   background-color: #ff9;
+   flex-basis: 10%;
+ }
 
+ .inner {
+   order: -1;
+ }
 
-
-
-
-
-
+ .inner li {
+   flex-basis: 20%;
+ }
+}
